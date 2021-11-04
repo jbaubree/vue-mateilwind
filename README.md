@@ -4,12 +4,12 @@ You need [Vue.js](https://v3.vuejs.org/) version 3.0+
 
 ```bash
 # npm
-npm install equal-vue
+npm install vue-mateilwind
 ```
 
 ```bash
 # yarn
-yarn add equal-vue
+yarn add vue-mateilwind
 ```
 
 # Usage
@@ -18,8 +18,8 @@ yarn add equal-vue
 
 ```js
 import { createApp } from 'vue'
-import Equal from 'equal-vue'
-import 'equal-vue/dist/style.css'
+import VueMateilwind from 'vue-mateilwind'
+import 'vue-mateilwind/dist/style.css'
 
 createApp.use(Equal)
 ```
@@ -28,8 +28,8 @@ createApp.use(Equal)
 
 ```js
 import { createApp } from 'vue'
-import { Button, Alert, Switch } from 'equal-vue'
-import 'equal-vue/dist/style.css'
+import { Button, Select } from 'vue-mateilwind'
+import 'vue-mateilwind/dist/style.css'
 
-createApp.use(Button).use(Alert).use(Switch)
+createApp.use(Button).use(Select)
 ```

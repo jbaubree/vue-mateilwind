@@ -21,7 +21,7 @@ import { createApp } from 'vue'
 import VueMateilwind from 'vue-mateilwind'
 import 'vue-mateilwind/dist/style.css'
 
-createApp.use(Equal)
+createApp.use(VueMateilwind)
 ```
 
 ## Or individual components

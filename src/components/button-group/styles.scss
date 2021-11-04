@@ -1,0 +1,9 @@
+.button-group {
+  button {
+    @apply first:rounded-l last:rounded-r rounded-none;
+
+    &:not(:first-child) {
+      @apply border-l-0;
+    }
+  }
+}

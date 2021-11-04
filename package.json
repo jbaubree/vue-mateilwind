@@ -1,0 +1,58 @@
+{
+  "name": "vue-mateilwind",
+  "version": "0.1.1",
+  "description": "Vue 3 components library based on TypeScript",
+  "author": {
+    "name": "Jean-Baptiste AUBRÉE",
+    "email": "jb.aubree@protonmail.com"
+  },
+  "main": "./dist/vue-mateilwind.umd.js",
+  "module": "./dist/vue-mateilwind.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-mateilwind.es.js",
+      "require": "./dist/vue-mateilwind.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "types": "src/components.d.ts",
+  "private": false,
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^6.7.5",
+    "@vueuse/head": "^0.6.0",
+    "material-ripple-effects": "^2.0.1",
+    "vee-validate": "^4.5.5",
+    "vue": "^3.2.16",
+    "vue-i18n": "^9.2.0-beta.17",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.10.0",
+    "@iconify-json/carbon": "^1.0.8",
+    "@intlify/vite-plugin-vue-i18n": "^3.0.0",
+    "@vitejs/plugin-vue": "^1.9.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.1.0",
+    "https-localhost": "^4.7.0",
+    "pnpm": "^6.20.2",
+    "sass": "^1.43.4",
+    "typescript": "^4.4.3",
+    "unplugin-auto-import": "^0.4.13",
+    "unplugin-icons": "^0.12.18",
+    "unplugin-vue-components": "^0.17.0",
+    "vite": "^2.6.4",
+    "vite-plugin-windicss": "^1.4.12",
+    "vue-tsc": "^0.3.0",
+    "windicss": "^3.2.1"
+  }
+}

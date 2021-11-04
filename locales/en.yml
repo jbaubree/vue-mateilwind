@@ -1,0 +1,23 @@
+home:
+  welcome: Welcome
+datepicker:
+  today: Today
+  clear: Clear
+sidebar:
+  home: Home
+  buttons: Buttons
+  tables: Tables
+  inputs: Inputs
+  lists: Lists
+  dropdowns: Dropdowns
+  modals: Modals
+  selects: Selects
+  datepickers: Datepickers
+pagination:
+  previous: Previous
+  next: Next
+  total: Total
+  rows_per_page: Rows per page
+  current_page: Current page
+select:
+  no_result: Aucun résultat

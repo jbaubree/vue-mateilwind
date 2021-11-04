@@ -1,0 +1,10 @@
+@layer utilities {
+  .slide-in-up-enter-active,
+  .slide-in-up-leave-active {
+    @apply transition duration-400 transform translate-y-0;
+  }
+  .slide-in-up-enter-from,
+  .slide-in-up-leave-to {
+    @apply opacity-0 transform translate-y-2;
+  }
+}

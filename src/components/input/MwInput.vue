@@ -4,7 +4,7 @@ import type { InputType } from '@/types/form'
 import { useForm } from '@/utils/form.utils'
 
 const props = withDefaults(defineProps<{
-  modelValue?: string
+  modelValue: string
   variant?: Variant
   type?: InputType
   label?: string
@@ -17,7 +17,6 @@ const props = withDefaults(defineProps<{
   size: 'md',
 })
 
-const vModel = ref(props.modelValue)
 const isValidating = ref<boolean>(false)
 const rInput = ref<HTMLDivElement>()
 const isInputFocus = ref<boolean>(false)
@@ -57,12 +56,12 @@ function updateValue(e: Event): void {
       <label
         class="text-gray-400 absolute h-5 top-4 transition-all duration-300 transform"
         :class="{
-          'text-xs -translate-y-6': isInputFocus || vModel?.length,
+          'text-xs -translate-y-6': isInputFocus || modelValue?.length,
         }"
       >{{ label }}</label>
       <input
         ref="rInput"
-        v-model="vModel"
+        :value="modelValue"
         :type="type"
         placeholder=" "
         class="relative min-w-0 min-h-8 flex-1 bg-transparent px-0"

@@ -74,6 +74,8 @@ const listItems: ListItem[] = [
   },
 ]
 
+const inputText = ref('')
+
 const {
   isRevealed,
   reveal,
@@ -164,7 +166,7 @@ function onPageChange(context: PaginationChangeEventContext): void {
 </script>
 <template>
   <div class="p-10 h-screen overflow-y-auto">
-    <div class="max-w-150 flex flex-col gap-10">
+    <div class="flex flex-col gap-10">
       <div class="flex flex-wrap gap-3">
         <MwBadge is-clearable>
           Button
@@ -336,10 +338,10 @@ function onPageChange(context: PaginationChangeEventContext): void {
         </MwSmall>
       </div>
       <div>
-        <MwInput size="sm" variant="primary" label="Small input" />
-        <MwInput size="md" variant="secondary" label="Medium input" />
-        <MwInput size="lg" variant="success" label="Large input" />
-        <MwInput variant="primary" label="Icon input">
+        <MwInput v-model="inputText" size="sm" variant="primary" label="Small input" />
+        <MwInput v-model="inputText" size="md" variant="secondary" label="Medium input" />
+        <MwInput v-model="inputText" size="lg" variant="success" label="Large input" />
+        <MwInput v-model="inputText" variant="primary" label="Icon input">
           <template #icon>
             <CarbonUser />
           </template>

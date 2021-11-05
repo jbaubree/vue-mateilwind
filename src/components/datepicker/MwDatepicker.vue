@@ -180,6 +180,7 @@ function onClearButtonClick(): void {
 function setCurrentSelection() {
   currentSelection.value = props.defaultStep || 'day'
 }
+
 onMounted(() => {
   setCurrentSelection()
   initDate()

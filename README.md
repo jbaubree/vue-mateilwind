@@ -28,8 +28,8 @@ createApp.use(VueMateilwind)
 
 ```js
 import { createApp } from 'vue'
-import { Button, Select } from 'vue-mateilwind'
+import { MwButton, MwSelect } from 'vue-mateilwind'
 import 'vue-mateilwind/dist/style.css'
 
-createApp.use(Button).use(Select)
+createApp.use(MwButton).use(MwSelect)
 ```

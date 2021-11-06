@@ -4,6 +4,3 @@ export type Variant =
  | 'success'
  | 'warning'
  | 'danger'
- | 'link'
- | 'light'
- | 'light-primary'

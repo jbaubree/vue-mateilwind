@@ -1,3 +1,5 @@
+import { Variant } from './common'
+
 export type Ripple = 'dark' | 'light'
 
 export type ButtonSize =
@@ -5,3 +7,9 @@ export type ButtonSize =
 | 'md'
 | 'lg'
 | 'xl'
+
+export type ButtonVariant =
+| Variant
+| 'link'
+| 'light'
+| 'light-primary'

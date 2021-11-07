@@ -18,10 +18,15 @@ export default {
     isClearable: {
       control: { type: 'boolean' },
     },
+    default: {
+      control: 'text',
+      description: 'Text',
+    },
   },
   args: {
     variant: 'secondary',
     isClearable: false,
+    default: 'Badge',
   }
 }
 
@@ -30,7 +35,7 @@ const Template: Story<BadgeProps> = (args: BadgeProps) => ({
   setup() {
     return { args }
   },
-  template: '<BadgeComponent v-bind="args">Badge</BadgeComponent>',
+  template: '<BadgeComponent v-bind="args">{{ args.default }}</BadgeComponent>',
 })
 
 export const Badge = Template.bind({})

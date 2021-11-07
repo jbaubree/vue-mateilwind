@@ -47,6 +47,10 @@ export default {
     hasIcon: {
       control: { type: 'boolean' },
     },
+    default: {
+      control: 'text',
+      description: 'Text',
+    },
   },
   args: {
     variant: 'secondary',
@@ -57,6 +61,7 @@ export default {
     isElevated: false,
     isOutlined: false,
     hasIcon: false,
+    default: 'Btn',
   }
 }
 
@@ -65,7 +70,7 @@ const Template: Story<ButtonProps> = (args: ButtonProps) => ({
   setup() {
     return { args }
   },
-  template: '<ButtonComponent v-bind="args">Btn</ButtonComponent>',
+  template: '<ButtonComponent v-bind="args">{{ args.default }}</ButtonComponent>',
 })
 
 export const Button = Template.bind({})

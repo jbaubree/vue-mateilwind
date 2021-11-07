@@ -277,7 +277,7 @@ onMounted(() => {
               <div style="width: 14.28%;" class="px-1 mb-1">
                 <MwButton
                   variant="light-primary"
-                  class="rounded-full text-gray-700 flex justify-center"
+                  class="rounded-full flex justify-center"
                   is-block
                   :class="{
                     '!bg-primary-500 !text-white': isSelectedDate(date),

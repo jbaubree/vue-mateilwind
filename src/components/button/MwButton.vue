@@ -48,11 +48,13 @@ const type = computed((): string => (props.href ? 'a' : 'button'))
       'cursor-default': isDisabled,
       'cursor-wait': isLoading,
       // Colors
-      'text-black': variant === 'light',
+      'text-gray-700': variant.includes('light'),
       'text-blue-500 bg-white hover:bg-white': variant === 'link',
       [`bg-${variant}-500 text-white`]: !isOutlined && variant !== 'link',
       [`bg-transparent text-${variant}-500 border border-${variant}-500`]: isOutlined,
-      [`hover:bg-${variant}-500 hover:text-white hover:border-transparent`]: isOutlined && !isDisabled,
+      [`hover:bg-${variant}-500 hover:text-white hover:border-transparent`]: isOutlined && !isDisabled && variant !== 'link' && !variant.includes('light'),
+      ['hover:bg-blue-500 hover:text-white hover:border-transparent']: isOutlined && !isDisabled  && variant === 'link',
+      [`hover:bg-${variant}-700 hover:text-white hover:border-transparent`]: isOutlined && !isDisabled  && variant.includes('light'),
       [`hover:bg-${variant}-700`]: !isDisabled && !isLoading && !isOutlined && variant !== 'link',
     }]"
     @mouseup="(e: MouseEvent) => {

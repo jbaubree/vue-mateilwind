@@ -33,3 +33,9 @@ import 'vue-mateilwind/dist/style.css'
 
 createApp.use(MwButton).use(MwSelect)
 ```
+
+# View documentation
+
+```bash
+https://priceless-wescoff-fd2659.netlify.app/
+```

@@ -1,6 +1,6 @@
-import type { ButtonSize, ButtonVariant } from '@/types/button'
-import { Story } from '@/types/storybook'
-import ButtonComponent from './MwButton.vue'
+import type { ButtonSize, ButtonVariant } from '../../types/button'
+import { Story } from '../../types/storybook'
+import ButtonComponent from '.'
 
 interface ButtonProps {
   href?: string

@@ -1,4 +1,3 @@
-//@ts-nocheck
 import type { ArgType as BaseArgType, StoryContext } from '@storybook/addons'
 import { Args as DefaultArgs, Annotations, BaseStory as BaseBaseStory } from '@storybook/addons'
 import { Component } from '@vue/runtime-core'

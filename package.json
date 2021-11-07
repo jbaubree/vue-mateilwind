@@ -1,6 +1,6 @@
 {
   "name": "vue-mateilwind",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Vue 3 components library based on TypeScript",
   "author": {
     "name": "Jean-Baptiste AUBRÉE",
@@ -25,6 +25,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "tsc": "vue-tsc --noEmit",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

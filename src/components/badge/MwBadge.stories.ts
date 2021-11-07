@@ -1,6 +1,6 @@
-import { Variant } from '@/types/common'
-import { Story } from '@/types/storybook'
-import BadgeComponent from './MwBadge.vue'
+import { Variant } from '../../types/common'
+import { Story } from '../../types/storybook'
+import BadgeComponent from '.'
 
 interface BadgeProps {
   variant?: Variant;

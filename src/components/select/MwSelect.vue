@@ -175,14 +175,14 @@ const filteredItems = computed((): SelectItem[] | undefined => {
               v-for="item, index in filteredItems"
               :key="index"
               v-bind="{ item }"
-              is-clickable
-              :is-disabled="isLoading"
-              :is-selected="isItemSelected(item)"
+              isClickable
+              :isDisabled="isLoading"
+              :isSelected="isItemSelected(item)"
               @click.prevent.stop="onListItemClick(item)"
             />
           </template>
           <template v-else>
-            <MwListItem :item="{ title: $t('select.no_result') }" :is-disabled="isLoading" />
+            <MwListItem :item="{ title: $t('select.no_result') }" :isDisabled="isLoading" />
           </template>
         </MwList>
       </div>

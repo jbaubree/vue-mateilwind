@@ -327,7 +327,7 @@ onMounted(() => {
           <MwButton variant="primary" @click="onTodayButtonClick()">
             {{ $t('datepicker.today') }}
           </MwButton>
-          <MwButton is-outlined @click="onClearButtonClick()">
+          <MwButton isOutlined @click="onClearButtonClick()">
             {{ $t('datepicker.clear') }}
           </MwButton>
         </div>

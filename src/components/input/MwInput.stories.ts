@@ -6,9 +6,6 @@ export default {
   title: 'Input',
   component: InputComponent,
   argTypes: {
-    modelValue: {
-      control: { type: 'text' },
-    },
     variant: {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'success', 'warning', 'danger'],
@@ -35,7 +32,6 @@ export default {
     },
   },
   args: {
-    // modelValue: '',
     variant: 'primary',
     type: 'text',
     label: 'Label',

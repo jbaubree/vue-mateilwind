@@ -278,7 +278,7 @@ onMounted(() => {
                 <MwButton
                   variant="light-primary"
                   class="rounded-full flex justify-center"
-                  isBlock
+                  :isBlock="true"
                   :class="{
                     '!bg-primary-500 !text-white': isSelectedDate(date),
                     'border border-primary-300': isToday(date) && !isSelectedDate(date),
@@ -298,7 +298,7 @@ onMounted(() => {
                 <MwButton
                   variant="light-primary"
                   class="px-1 mb-1 rounded-full text-gray-700"
-                  isBlock
+                  :isBlock="true"
                   @click="setMonth(index)"
                 >
                   {{ monthNumber.substr(0, 3) }}
@@ -314,7 +314,7 @@ onMounted(() => {
                 <MwButton
                   variant="light-primary"
                   class="px-1 mb-1 rounded-full text-gray-700"
-                  isBlock
+                  :isBlock="true"
                   @click="setYear(yearNumber)"
                 >
                   {{ yearNumber }}
@@ -327,7 +327,7 @@ onMounted(() => {
           <MwButton variant="primary" @click="onTodayButtonClick()">
             {{ $t('datepicker.today') }}
           </MwButton>
-          <MwButton isOutlined @click="onClearButtonClick()">
+          <MwButton :isOutlined="true" @click="onClearButtonClick()">
             {{ $t('datepicker.clear') }}
           </MwButton>
         </div>

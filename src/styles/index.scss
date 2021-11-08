@@ -2,9 +2,10 @@
 
 @import 'body';
 @import 'transition';
+@import 'position';
 
-@import '../components/button/styles';
-@import '../components/button-group/styles';
-@import '../components/dropdown/styles';
-@import '../components/input/styles';
-@import '../components/table/styles';
+@import '@/components/button/styles';
+@import '@/components/button-group/styles';
+@import '@/components/dropdown/styles';
+@import '@/components/input/styles';
+@import '@/components/table/styles';

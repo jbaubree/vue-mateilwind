@@ -1,11 +1,5 @@
-import { Variant } from '../../types/common'
-import { Story } from '../../types/storybook'
+import { Meta, Story } from '@storybook/vue3'
 import BadgeComponent from '.'
-
-interface BadgeProps {
-  variant?: Variant;
-  isClearable?: boolean;
-}
 
 export default {
   title: 'Badge',
@@ -28,9 +22,9 @@ export default {
     isClearable: false,
     default: 'Badge',
   }
-}
+} as Meta
 
-const Template: Story<BadgeProps> = (args: BadgeProps) => ({
+const Template: Story = args => ({
   components: { BadgeComponent },
   setup() {
     return { args }

@@ -23,5 +23,5 @@
     },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
-  "exclude": ["dist", "node_modules", "**/*.stories.ts", "src/types/storybook.ts"],
+  "exclude": ["dist", "node_modules", "**/*.stories.ts"],
 }

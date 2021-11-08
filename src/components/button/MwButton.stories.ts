@@ -1,18 +1,5 @@
-import type { ButtonSize, ButtonVariant } from '../../types/button'
-import { Story } from '../../types/storybook'
+import { Meta, Story } from '@storybook/vue3'
 import ButtonComponent from '.'
-
-interface ButtonProps {
-  href?: string
-  variant?: ButtonVariant
-  size?: ButtonSize
-  isBlock?: boolean
-  isDisabled?: boolean
-  isLoading?: boolean
-  isElevated?: boolean
-  isOutlined?: boolean
-  hasIcon?: boolean
-}
 
 export default {
   title: 'Button',
@@ -63,9 +50,9 @@ export default {
     hasIcon: false,
     default: 'Btn',
   }
-}
+} as Meta
 
-const Template: Story<ButtonProps> = (args: ButtonProps) => ({
+const Template: Story = args => ({
   components: { ButtonComponent },
   setup() {
     return { args }

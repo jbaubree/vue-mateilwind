@@ -5,6 +5,7 @@ const IconsResolver = require('unplugin-icons/resolver')
 const Components = require('unplugin-vue-components/vite')
 const AutoImport = require('unplugin-auto-import/vite')
 const VueI18n = require('@intlify/vite-plugin-vue-i18n').default
+const { loadConfigFromFile, mergeConfig } = require('vite')
 
 module.exports = {
   typescript: {
@@ -59,22 +60,16 @@ module.exports = {
     config.plugins.push(VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
-      include: [path.resolve(__dirname, 'locales/**')],
+      include: [path.resolve(__dirname, '..', 'locales/**')],
     }))
 
     return {
       ...config,
       resolve: {
-        alias: [
-          {
-            find: '@',
-            replacement: path.resolve(__dirname, './src'),
-          },
-          {
-            find: 'vue',
-            replacement: 'vue/dist/vue.esm-bundler.js',
-          },
-        ]
+        alias: {
+          '@/': `${path.resolve(__dirname, '..', 'src')}/`,
+          'vue': 'vue/dist/vue.esm-bundler.js',
+        },
       }
     }
   }

@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<{
   variant?: Variant
   type?: InputType
   label?: string
-  size?: string
+  size?: 'sm' | 'md' | 'lg'
   errorMessage?: string
   hasValidation?: boolean
 }>(), {

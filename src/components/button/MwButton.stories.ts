@@ -6,7 +6,7 @@ export default {
   component: ButtonComponent,
   argTypes: {
     href: {
-      control: { type: 'string' },
+      control: { type: 'text' },
     },
     variant: {
       control: { type: 'select' },

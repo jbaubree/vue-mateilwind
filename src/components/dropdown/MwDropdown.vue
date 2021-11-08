@@ -16,7 +16,7 @@ onClickOutside(rDropdown, () => showDropdown.value = false)
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative inline-block">
     <div @click="showDropdown = !showDropdown">
       <slot name="toggler" />
     </div>

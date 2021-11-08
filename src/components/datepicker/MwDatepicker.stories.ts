@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/vue3'
 import { ref } from 'vue'
-import DatepickerComponent from '.'
+import MwDatepicker from '.'
 
 export default {
   title: 'Datepicker',
-  component: DatepickerComponent,
+  component: MwDatepicker,
   argTypes: {
     label: {
       control: { type: 'text' },
@@ -38,12 +38,12 @@ export default {
 } as Meta
 
 const Template: Story = args => ({
-  components: { DatepickerComponent },
+  components: { MwDatepicker },
   setup() {
     const model = ref('')
     return { args, model }
   },
-  template: '<DatepickerComponent v-bind="args" v-model="model" />',
+  template: '<MwDatepicker class="min-h-100" v-bind="args" v-model="model" />',
 })
 
 export const Datepicker = Template.bind({})

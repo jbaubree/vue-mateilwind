@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
-import BadgeComponent from '.'
+import MwBadge from '.'
 
 export default {
   title: 'Badge',
-  component: BadgeComponent,
+  component: MwBadge,
   argTypes: {
     variant: {
       control: { type: 'select' },
@@ -25,11 +25,11 @@ export default {
 } as Meta
 
 const Template: Story = args => ({
-  components: { BadgeComponent },
+  components: { MwBadge },
   setup() {
     return { args }
   },
-  template: '<BadgeComponent v-bind="args">{{ args.default }}</BadgeComponent>',
+  template: '<MwBadge v-bind="args">{{ args.default }}</MwBadge>',
 })
 
 export const Badge = Template.bind({})

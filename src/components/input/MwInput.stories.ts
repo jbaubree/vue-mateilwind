@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/vue3'
 import { ref } from 'vue'
-import InputComponent from '.'
+import MwInput from '.'
 
 export default {
   title: 'Input',
-  component: InputComponent,
+  component: MwInput,
   argTypes: {
     variant: {
       control: { type: 'select' },
@@ -42,17 +42,17 @@ export default {
 } as Meta
 
 const Template: Story = args => ({
-  components: { InputComponent },
+  components: { MwInput },
   setup() {
     const model = ref('')
     return { args, model }
   },
   template: `
-    <InputComponent v-bind="args" v-model="model">
+    <MwInput v-bind="args" v-model="model">
       <template #icon>
         {{ args.icon }}
       </template>
-    </InputComponent>`,
+    </MwInput>`,
 })
 
 export const Input = Template.bind({})

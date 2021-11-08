@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
-import ButtonComponent from '.'
+import MwButton from '.'
 
 export default {
   title: 'Button',
-  component: ButtonComponent,
+  component: MwButton,
   argTypes: {
     href: {
       control: { type: 'text' },
@@ -53,11 +53,11 @@ export default {
 } as Meta
 
 const Template: Story = args => ({
-  components: { ButtonComponent },
+  components: { MwButton },
   setup() {
     return { args }
   },
-  template: '<ButtonComponent v-bind="args">{{ args.default }}</ButtonComponent>',
+  template: '<MwButton v-bind="args">{{ args.default }}</MwButton>',
 })
 
 export const Button = Template.bind({})

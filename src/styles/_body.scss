@@ -4,14 +4,12 @@
   outline: none !important;
 }
 
-@layer utilities {
-  html, body, #app {
-    @apply h-full leading-none;
-  }
+html, body, #app {
+  @apply h-full leading-none;
+}
 
-  #app {
-    @apply w-full min-h-screen relative text-primary-900 bg-primary-50;
-  }
+#app {
+  @apply w-full min-h-screen relative text-primary-900 bg-primary-50;
 }
 
 body {

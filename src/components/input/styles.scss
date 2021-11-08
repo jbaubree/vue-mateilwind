@@ -1,16 +1,14 @@
-@layer utilities {
-  .form-input-wrapper:after {
-    content: '';
-    @apply absolute -bottom-2px w-full border-b-2 border-transparent transform scale-x-0 transition-all duration-300;
-  }
+.form-input-wrapper:after {
+  content: '';
+  @apply absolute -bottom-2px w-full border-b-2 border-transparent transform scale-x-0 transition-all duration-300;
+}
 
-  .form-input-wrapper:focus-within:after {
-    @apply scale-x-100;
-  }
+.form-input-wrapper:focus-within:after {
+  @apply scale-x-100;
+}
 
-  @each $color in $variants {
-    .form-input__#{$color}:focus-within:after {
-      @apply border-#{$color}-500;
-    }
+@each $color in $variants {
+  .form-input__#{$color}:focus-within:after {
+    @apply border-#{$color}-500;
   }
 }

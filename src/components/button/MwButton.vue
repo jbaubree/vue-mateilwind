@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<{
   isOutlined?: boolean
   hasIcon?: boolean
 }>(), {
-  variant: 'secondary',
+  variant: 'primary',
   size: 'md',
 })
 

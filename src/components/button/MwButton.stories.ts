@@ -40,7 +40,7 @@ export default {
     },
   },
   args: {
-    variant: 'secondary',
+    variant: 'primary',
     size: 'md',
     isBlock: false,
     isDisabled: false,

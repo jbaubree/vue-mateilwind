@@ -18,7 +18,7 @@ export default {
     },
   },
   args: {
-    variant: 'secondary',
+    variant: 'primary',
     isClearable: false,
     default: 'Badge',
   }

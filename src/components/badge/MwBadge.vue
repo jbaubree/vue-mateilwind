@@ -5,7 +5,7 @@ withDefaults(defineProps<{
   variant?: Variant
   isClearable?: boolean
 }>(), {
-  variant: 'secondary',
+  variant: 'primary',
 })
 
 const emit = defineEmits<{

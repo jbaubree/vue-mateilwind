@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/vue3'
+import { ref } from 'vue'
 import DatepickerComponent from '.'
 
 export default {
@@ -19,7 +20,7 @@ export default {
       control: { type: 'array' },
     },
     formatOptions: {
-      control: { type: 'text' },
+      control: { type: 'object' },
     },
   },
   args: {
@@ -27,15 +28,22 @@ export default {
     defaultStep: 'day',
     months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday'],
+    formatOptions: {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }
   }
 } as Meta
 
 const Template: Story = args => ({
   components: { DatepickerComponent },
   setup() {
-    return { args }
+    const model = ref('')
+    return { args, model }
   },
-  template: '<DatepickerComponent v-bind="args" />',
+  template: '<DatepickerComponent v-bind="args" v-model="model" />',
 })
 
 export const Datepicker = Template.bind({})

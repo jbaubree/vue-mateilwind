@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/vue3'
+import { ref } from 'vue'
 import InputComponent from '.'
 
 export default {
@@ -34,7 +35,7 @@ export default {
     },
   },
   args: {
-    modelValue: '',
+    // modelValue: '',
     variant: 'primary',
     type: 'text',
     label: 'Label',
@@ -47,10 +48,11 @@ export default {
 const Template: Story = args => ({
   components: { InputComponent },
   setup() {
-    return { args }
+    const model = ref('')
+    return { args, model }
   },
   template: `
-    <InputComponent v-bind="args">
+    <InputComponent v-bind="args" v-model="model">
       <template #icon>
         {{ args.icon }}
       </template>

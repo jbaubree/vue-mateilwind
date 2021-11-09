@@ -20,60 +20,56 @@ declare module 'vue' {
   }
 }
 
-export { }
+export const install = PluginFunction<{}>()
 
-declare module 'vue-mateilwind' {
+export namespace MwBadge {
   const install: PluginFunction<{}>
-
-  export namespace MwBadge {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwButton {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwButtonGroup {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwButtonLoader {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwCard {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwDatepicker {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwDropdown {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwHeading {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwInput {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwList {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwListItem {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwModal {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwP {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwPagination {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwSelect {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwSmall {
-    const install: PluginFunction<{}>
-  }
-  export namespace MwTable {
-    const install: PluginFunction<{}>
-  }
+}
+export namespace MwButton {
+  const install: PluginFunction<{}>
+}
+export namespace MwButtonGroup {
+  const install: PluginFunction<{}>
+}
+export namespace MwButtonLoader {
+  const install: PluginFunction<{}>
+}
+export namespace MwCard {
+  const install: PluginFunction<{}>
+}
+export namespace MwDatepicker {
+  const install: PluginFunction<{}>
+}
+export namespace MwDropdown {
+  const install: PluginFunction<{}>
+}
+export namespace MwHeading {
+  const install: PluginFunction<{}>
+}
+export namespace MwInput {
+  const install: PluginFunction<{}>
+}
+export namespace MwList {
+  const install: PluginFunction<{}>
+}
+export namespace MwListItem {
+  const install: PluginFunction<{}>
+}
+export namespace MwModal {
+  const install: PluginFunction<{}>
+}
+export namespace MwP {
+  const install: PluginFunction<{}>
+}
+export namespace MwPagination {
+  const install: PluginFunction<{}>
+}
+export namespace MwSelect {
+  const install: PluginFunction<{}>
+}
+export namespace MwSmall {
+  const install: PluginFunction<{}>
+}
+export namespace MwTable {
+  const install: PluginFunction<{}>
 }

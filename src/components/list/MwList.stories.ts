@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 import MwList from '.'
 import MwListItem from '../list-item'
 import MwButton from '../button'
-import type { ListItem } from '../../types/list'
+import type { ListItem } from '../../types'
 
 export default {
   title: 'List',

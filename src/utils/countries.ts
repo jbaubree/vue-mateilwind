@@ -1,4 +1,4 @@
-import { SelectItem } from '@/types/form'
+import { SelectItem } from '@/types'
 
 const countries: SelectItem[] = [
   {

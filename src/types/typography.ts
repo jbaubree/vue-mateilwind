@@ -1,4 +1,4 @@
-export type HeadingType =
+export type Heading =
 | 'h1'
 | 'h2'
 | 'h3'

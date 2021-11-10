@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/vue3'
 import { ref } from 'vue'
 import MwPagination from '.'
-import type { PaginationChangeEventContext } from '../../types/pagination'
+import type { PaginationChangeEventContext } from '../../types'
 
 export default {
   title: 'Pagination',

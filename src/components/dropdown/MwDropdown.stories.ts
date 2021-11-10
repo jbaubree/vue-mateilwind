@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 import MwDropdown from '.'
 import MwButton from '../button'
 import MwListItem from '../list-item'
-import type { ListItem } from '../../types/list'
+import type { ListItem } from '../../types'
 
 export default {
   title: 'Dropdown',

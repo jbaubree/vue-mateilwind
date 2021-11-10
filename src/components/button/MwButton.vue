@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Ripple from 'material-ripple-effects'
-import type { ButtonSize, ButtonVariant } from '@/types/button'
+import type { ButtonSize, ButtonVariant } from '@/types'
 
 const props = withDefaults(defineProps<{
   href?: string

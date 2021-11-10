@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PaginationChangeEventContext } from '@/types/pagination'
+import type { PaginationChangeEventContext } from '@/types'
 
 const props = withDefaults(defineProps<{
   nbItems: number

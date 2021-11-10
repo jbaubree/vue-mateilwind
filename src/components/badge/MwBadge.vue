@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Variant } from '@/types/common'
+import type { Variant } from '@/types'
 
 withDefaults(defineProps<{
   variant?: Variant

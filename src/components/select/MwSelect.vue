@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Variant } from '@/types/common'
-import type { SelectItem } from '@/types/form'
+import type { Variant } from '@/types'
+import type { SelectItem } from '@/types'
 import { useForm } from '@/utils/form.utils'
 
 const props = withDefaults(defineProps<{

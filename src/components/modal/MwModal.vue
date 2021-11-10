@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonSize } from '@/types/button'
+import type { ButtonSize } from '@/types'
 
 const props = withDefaults(defineProps<{
   modelValue?: boolean

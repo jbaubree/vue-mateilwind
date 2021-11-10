@@ -3,7 +3,7 @@ import { useField } from 'vee-validate'
 import { ref, watchEffect } from 'vue'
 import MwSelect from '.'
 import countries from '../../utils/countries'
-import type { SelectItem } from '../../types/form'
+import type { SelectItem } from '../../types'
 
 export default {
   title: 'Select',

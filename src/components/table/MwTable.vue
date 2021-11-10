@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableField, SortDirection, TableSortChangeEventContext } from '@/types/table'
+import type { TableField, SortDirection, TableSortChangeEventContext } from '@/types'
 
 const props = withDefaults(defineProps<{
   fields: TableField[]

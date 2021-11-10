@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SelectableDateType } from '@/types/datepicker'
+import type { SelectableDateType } from '@/types'
 const { locale } = useI18n()
 
 const props = defineProps<{

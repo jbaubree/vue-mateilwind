@@ -44,7 +44,7 @@ const Template: Story = args => ({
     return { args, dropdownItems }
   },
   template: `
-    <MwDropdown class="min-h-50 mt-45" v-bind="args">
+    <MwDropdown class="min-h-50 mt-40 ml-40" v-bind="args">
       <template #title>
         I am title
       </template>

@@ -70,6 +70,7 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
+        ...colors,
         // Custom colors
         primary: colors.violet,
         secondary: colors.gray,
@@ -79,13 +80,12 @@ export default defineConfig({
         link: colors.blue,
         light: {
           500: 'white',
-          700: 'var(--color-gray-200)',
+          700: colors.gray[200],
         },
         'light-primary': {
           500: 'white',
-          700: 'var(--color-violet-200)',
+          700: colors.violet[200],
         },
-        ...colors,
       },
     },
   },

@@ -18,7 +18,7 @@ const emit = defineEmits<{
     class="inline-flex items-center gap-1 bg-primary-500 text-white rounded-full px-2 py-1 overflow-hidden"
     :class="`bg-${variant}-500`"
   >
-    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis">
+    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis leading-5">
       <slot />
     </span>
     <div

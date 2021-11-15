@@ -68,7 +68,7 @@ const Template: Story = args => ({
           {{ modalBody }}
         </template>
         <template #footer>
-          <MwButton is-outlined @click="cancel">
+          <MwButton is-outlined variant="secondary" @click="cancel">
             Close
           </MwButton>
           <MwButton variant="primary" @click="confirm">

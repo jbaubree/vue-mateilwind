@@ -31,6 +31,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-viewport": "^6.3.12",
     "@vueuse/core": "^6.7.5",
     "@vueuse/head": "^0.6.0",
     "lodash.merge": "^4.6.2",
@@ -44,6 +45,7 @@
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-measure": "^6.4.0-alpha.27",
     "@storybook/vue3": "^6.3.12",
     "@types/node": "^16.11.6",
     "@vitejs/plugin-vue": "^1.9.4",

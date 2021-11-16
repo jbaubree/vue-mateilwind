@@ -24,6 +24,8 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-actions',
     '@storybook/addon-docs',
+    '@storybook/addon-measure',
+    '@storybook/addon-viewport',
   ],
   core: {
     builder: 'storybook-builder-vite',

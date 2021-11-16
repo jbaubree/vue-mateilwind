@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { Heading } from '@/types'
-import type { Variant } from '@/types'
+import type { Heading, Variant } from '@/types'
 
 const props = defineProps<{
   type: Heading

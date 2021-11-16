@@ -21,8 +21,9 @@ module.exports = {
     "../src/components/**/*.stories.ts"
   ],
   addons: [
-    '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-actions',
+    '@storybook/addon-docs',
   ],
   core: {
     builder: 'storybook-builder-vite',

@@ -47,6 +47,13 @@ export default {
 const Template: Story = (args) => ({
   components: { MwSelect },
   setup() {
+    // args: {
+    //   variant: 'primary',
+    //   label: 'Select a country',
+    //   hasMultipleValues: true,
+    //   isClearable: true,
+    //   hasAsyncData: true,
+    // }
     const selectFetchedItems = ref<SelectItem[]>(countries.filter((_, index) => index < 10))
     const isSelectLoading = ref<boolean>(false)
     const selectModel = ref<SelectItem[]>([])
@@ -81,16 +88,14 @@ const Template: Story = (args) => ({
     return { args, selectFetchItems, isSelectLoading, selectFetchedItems, value, errorMessage }
   },
   template: `
-    <div class="min-h-100">
-      <MwSelect
-        v-model="value"
-        v-bind="args"
-        :items="selectFetchedItems"
-        :isLoading="isSelectLoading"
-        :errorMessage="errorMessage"
-        @input="selectFetchItems"
-      />
-    </div>`,
+    <MwSelect
+      v-model="value"
+      v-bind="args"
+      :items="selectFetchedItems"
+      :isLoading="isSelectLoading"
+      :errorMessage="errorMessage"
+      @input="selectFetchItems"
+    />`,
 })
 
 export const Select = Template.bind({})

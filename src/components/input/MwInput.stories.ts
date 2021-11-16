@@ -44,6 +44,14 @@ export default {
 const Template: Story = args => ({
   components: { MwInput },
   setup() {
+    // args: {
+    //   variant: 'primary',
+    //   type: 'text',
+    //   label: 'Label',
+    //   size: 'md',
+    //   hasValidation: false,
+    //   icon: '',
+    // }
     const model = ref('')
     return { args, model }
   },

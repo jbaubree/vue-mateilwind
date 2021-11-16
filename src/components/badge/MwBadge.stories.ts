@@ -27,6 +27,11 @@ export default {
 const Template: Story = args => ({
   components: { MwBadge },
   setup() {
+    // args: {
+    //   variant: 'primary',
+    //   isClearable: false,
+    //   default: 'Badge',
+    // }
     return { args }
   },
   template: '<MwBadge v-bind="args">{{ args.default }}</MwBadge>',

@@ -40,10 +40,22 @@ export default {
 const Template: Story = args => ({
   components: { MwDatepicker },
   setup() {
+    // args: {
+    //   label: 'Label',
+    //   defaultStep: 'day',
+    //   months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    //   days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday'],
+    //   formatOptions: {
+    //     weekday: 'short',
+    //     year: 'numeric',
+    //     month: 'short',
+    //     day: 'numeric',
+    //   }
+    // }
     const model = ref('')
     return { args, model }
   },
-  template: '<MwDatepicker class="min-h-100" v-bind="args" v-model="model" />',
+  template: '<MwDatepicker v-bind="args" v-model="model" />',
 })
 
 export const Datepicker = Template.bind({})

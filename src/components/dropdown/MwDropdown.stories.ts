@@ -30,6 +30,12 @@ export default {
 const Template: Story = args => ({
   components: { MwDropdown, MwButton, MwListItem },
   setup() {
+    // args: {
+    //   position: 'left',
+    //   dropup: false,
+    //   closeOnItemClick: false,
+    //   default: 'Dropdown',
+    // }
     const dropdownItems: ListItem[] = [
       {
         title: 'Dropdown item 1',
@@ -44,7 +50,7 @@ const Template: Story = args => ({
     return { args, dropdownItems }
   },
   template: `
-    <MwDropdown class="min-h-50 mt-40 ml-40" v-bind="args">
+    <MwDropdown v-bind="args">
       <template #title>
         I am title
       </template>

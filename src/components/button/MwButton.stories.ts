@@ -55,6 +55,17 @@ export default {
 const Template: Story = args => ({
   components: { MwButton },
   setup() {
+    // args: {
+    //   variant: 'primary',
+    //   size: 'md',
+    //   isBlock: false,
+    //   isDisabled: false,
+    //   isLoading: false,
+    //   isElevated: false,
+    //   isOutlined: false,
+    //   hasIcon: false,
+    //   default: 'Btn',
+    // }
     return { args }
   },
   template: '<MwButton v-bind="args">{{ args.default }}</MwButton>',

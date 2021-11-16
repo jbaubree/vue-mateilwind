@@ -23,6 +23,10 @@ export default {
 const Template: Story = args => ({
   components: { MwPagination },
   setup() {
+    // args: {
+    //   nbItems: 20,
+    //   itemsPerPage: 5,
+    // }
     const currentPage = ref<number>(1)
     function onPageChange(context: PaginationChangeEventContext): void {
       currentPage.value = context.currentPage

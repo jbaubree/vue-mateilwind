@@ -1,6 +1,6 @@
 import { app } from '@storybook/vue3'
 import i18n from '../src/modules/i18n'
-
+ 
 import 'virtual:windi.css'
 import '../src/styles/index.scss'
 

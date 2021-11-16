@@ -29,6 +29,11 @@ export default {
 const Template: Story = args => ({
   components: { MwModal, MwModalItem, MwButton },
   setup() {
+    // args: {
+    //   size: 'md',
+    //   hasCloseButton: false,
+    //   closeOnClickOutside: false,
+    // }
     const {
       isRevealed,
       reveal,

@@ -27,6 +27,10 @@ export default {
 const Template: Story = args => ({
   components: { MwHeading },
   setup() {
+    // args: {
+    //   type: 'h1',
+    //   default: 'I am Heading',
+    // }
     return { args }
   },
   template: `

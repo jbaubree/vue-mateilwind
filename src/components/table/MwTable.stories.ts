@@ -113,6 +113,41 @@ export default {
 const Template: Story = (args) => ({
   components: { MwTable, MwPagination },
   setup() {
+    // args: {
+    //   fields: [
+    //     {
+    //       label: 'User',
+    //       value: 'user',
+    //       isSortable: true,
+    //       minWidth: 120,
+    //     },
+    //     ...
+    //     {
+    //       label: '',
+    //       value: 'actions',
+    //       tdClass: 'justify-end',
+    //     },
+    //   ],
+    //   items: [
+    //     {
+    //       user: 'Jean Marc',
+    //       age: 30,
+    //       role: 'Admin',
+    //       createdAt: '12/09/2020',
+    //       isActive: true,
+    //     },
+    //     ...
+    //   ],
+    //   itemsPerPage: 2,
+    //   currentPage: 1,
+    //   isStriped: false,
+    //   isHoverable: false,
+    //   isSmall: true,
+    //   isBordered: false,
+    //   isLoading: false,
+    //   hasNoLocalSorting: false,
+    //   hasStickyHeader: false,
+    // }
     return { args }
   },
   template: `

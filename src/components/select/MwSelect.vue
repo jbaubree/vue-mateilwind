@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { Variant } from '@/types'
-import type { SelectItem } from '@/types'
+import type { Variant, SelectItem } from '@/types'
 import { useForm } from '@/utils/form.utils'
 
 const props = withDefaults(defineProps<{
@@ -175,14 +174,14 @@ const filteredItems = computed((): SelectItem[] | undefined => {
               v-for="item, index in filteredItems"
               :key="index"
               v-bind="{ item }"
-              isClickable
-              :isDisabled="isLoading"
-              :isSelected="isItemSelected(item)"
+              is-clickable
+              :is-disabled="isLoading"
+              :is-selected="isItemSelected(item)"
               @click.prevent.stop="onListItemClick(item)"
             />
           </template>
           <template v-else>
-            <MwListItem :item="{ title: $t('select.no_result') }" :isDisabled="isLoading" />
+            <MwListItem :item="{ title: $t('select.no_result') }" :is-disabled="isLoading" />
           </template>
         </MwList>
       </div>

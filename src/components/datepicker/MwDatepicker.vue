@@ -325,10 +325,10 @@ onMounted(() => {
         </template>
         <div class="flex justify-between">
           <MwButton variant="primary" @click="onTodayButtonClick()">
-            {{ $t('datepicker.today') }}
+            {{ $t('mw.datepicker.today') }}
           </MwButton>
           <MwButton :isOutlined="true" variant="secondary" @click="onClearButtonClick()">
-            {{ $t('datepicker.clear') }}
+            {{ $t('mw.datepicker.clear') }}
           </MwButton>
         </div>
       </div>

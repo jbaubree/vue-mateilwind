@@ -181,7 +181,7 @@ const filteredItems = computed((): SelectItem[] | undefined => {
             />
           </template>
           <template v-else>
-            <MwListItem :item="{ title: $t('select.no_result') }" :is-disabled="isLoading" />
+            <MwListItem :item="{ title: $t('mw.select.no_result') }" :is-disabled="isLoading" />
           </template>
         </MwList>
       </div>

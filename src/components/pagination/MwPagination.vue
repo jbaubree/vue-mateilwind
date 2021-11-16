@@ -42,7 +42,7 @@ const canGoBack = computed((): boolean => (currentPage.value > 1))
       variant="primary"
       @click="onPreviousPageButtonClick()"
     >
-      {{ $t('pagination.previous') }}
+      {{ $t('mw.pagination.previous') }}
     </MwButton>
     <MwButton
       v-if="canGoNext"
@@ -50,7 +50,7 @@ const canGoBack = computed((): boolean => (currentPage.value > 1))
       variant="primary"
       @click="onNextPageButtonClick()"
     >
-      {{ $t('pagination.next') }}
+      {{ $t('mw.pagination.next') }}
     </MwButton>
   </MwButtonGroup>
 </template>

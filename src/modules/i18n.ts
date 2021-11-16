@@ -1,5 +1,3 @@
-import { createI18n } from 'vue-i18n'
-
 const messages = Object.fromEntries(
   Object.entries(
     import.meta.globEager('../../locales/*.y(a)?ml'))
@@ -9,9 +7,9 @@ const messages = Object.fromEntries(
     }),
 )
 
-export default createI18n({
+export default {
   legacy: false,
   locale: 'en',
   messages,
   globalInjection: true,
-})
+}

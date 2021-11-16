@@ -1,20 +1,21 @@
-home:
-  welcome: Bienvenue
-datepicker:
-  today: Aujourd'hui
-  clear: Vider
-sidebar:
-  home: Accueil
-  buttons: Boutons
-  tables: Tableaux
-  inputs: Entrée
-  lists: Listes
-  dropdowns: Listes déroulantes
-  modals: Modales
-  selects: Sélecteur
-  datepickers: Champ date
-pagination:
-  previous: Précédent
-  next: Suivant
-select:
-  no_result: Aucun résultat
+mw:
+  home:
+    welcome: Bienvenue
+  datepicker:
+    today: Aujourd'hui
+    clear: Vider
+  sidebar:
+    home: Accueil
+    buttons: Boutons
+    tables: Tableaux
+    inputs: Entrée
+    lists: Listes
+    dropdowns: Listes déroulantes
+    modals: Modales
+    selects: Sélecteur
+    datepickers: Champ date
+  pagination:
+    previous: Précédent
+    next: Suivant
+  select:
+    no_result: Aucun résultat

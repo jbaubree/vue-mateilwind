@@ -1,5 +1,9 @@
 import { App } from 'vue'
 
+import { createI18n } from 'vue-i18n'
+import i18nOptions from './modules/i18n'
+import merge from 'lodash.merge'
+
 import MwBadge from './components/badge'
 import MwButton from './components/button'
 import MwButtonGroup from './components/button-group'
@@ -46,7 +50,15 @@ const components = {
   MwTable,
 }
 
-function install(Vue: App) {
+function install(Vue: App, options) {
+  if (options?.messages) {
+    i18nOptions.messages = merge(
+      {},
+      i18nOptions.messages,
+      options.messages
+    )
+  }
+  Vue.use(createI18n(i18nOptions))
   // eslint-disable-next-line no-restricted-syntax
   for (const component in components) {
     // @ts-ignore

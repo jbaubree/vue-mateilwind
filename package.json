@@ -1,6 +1,6 @@
 {
   "name": "vue-mateilwind",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Vue 3 components library based on TypeScript",
   "author": {
     "name": "Jean-Baptiste AUBRÉE",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@storybook/addon-viewport": "^6.3.12",
     "@vueuse/core": "^6.7.5",
-    "@vueuse/head": "^0.6.0",
     "lodash.merge": "^4.6.2",
     "vue": "^3.2.16",
     "vue-i18n": "^9.2.0-beta.19"

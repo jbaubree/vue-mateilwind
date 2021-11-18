@@ -1,11 +1,11 @@
 import { Meta, Story } from '@storybook/vue3'
-import MwModal from '.'
+import { useConfirmDialog } from '@vueuse/core'
 import MwModalItem from '../list-item'
 import MwButton from '../button'
-import { useConfirmDialog } from '@vueuse/core'
+import MwModal from '.'
 
 export default {
-  title: 'Modal',
+  title: 'Components/Modal',
   component: MwModal,
   argTypes: {
     size: {
@@ -23,7 +23,7 @@ export default {
     size: 'md',
     hasCloseButton: false,
     closeOnClickOutside: false,
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -40,13 +40,13 @@ const Template: Story = args => ({
       confirm,
       cancel,
     } = useConfirmDialog()
-    
+
     const modalBody = `I always felt like I could do anything. That’s the main
       thing people are controlled by! Thoughts- their perception
       of themselves! They're slowed down by their perception of
       themselves. If you're taught you can’t do anything, you
       won’t do anything. I was taught I could do everything.`
-    
+
     return {
       args,
       isRevealed,
@@ -85,5 +85,3 @@ const Template: Story = args => ({
 })
 
 export const Modal = Template.bind({})
-
-

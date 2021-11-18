@@ -1,9 +1,10 @@
 import { App } from 'vue'
 
 import { createI18n } from 'vue-i18n'
-import i18nOptions from './modules/i18n'
 import merge from 'lodash.merge'
+import i18n from './modules/i18n'
 
+import MwAlert from './components/alert'
 import MwBadge from './components/badge'
 import MwButton from './components/button'
 import MwButtonGroup from './components/button-group'
@@ -31,6 +32,7 @@ import 'virtual:windi-utilities.css'
 import 'virtual:windi-devtools'
 
 const components = {
+  MwAlert,
   MwBadge,
   MwButton,
   MwButtonGroup,
@@ -51,11 +53,12 @@ const components = {
 }
 
 function install(Vue: App, options) {
-  if (options?.messages) {
-    i18nOptions.messages = merge(
+  let i18nOptions = i18n
+  if (options?.i18n) {
+    i18nOptions = merge(
       {},
-      i18nOptions.messages,
-      options.messages
+      i18n,
+      options.i18n,
     )
   }
   Vue.use(createI18n(i18nOptions))
@@ -68,6 +71,7 @@ function install(Vue: App, options) {
 
 export default { install }
 
+export { default as MwAlert } from './components/alert'
 export { default as MwBadge } from './components/badge'
 export { default as MwButton } from './components/button'
 export { default as MwButtonGroup } from './components/button-group'

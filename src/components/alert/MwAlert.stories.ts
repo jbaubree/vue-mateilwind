@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
-import MwBadge from '.'
+import MwAlert from '.'
 
 export default {
-  title: 'Components/Badge',
-  component: MwBadge,
+  title: 'Components/Alert',
+  component: MwAlert,
   argTypes: {
     variant: {
       control: { type: 'select' },
@@ -20,21 +20,21 @@ export default {
   args: {
     variant: 'primary',
     isClearable: false,
-    default: 'Badge',
+    default: 'Hey, this is an alert',
   },
 } as Meta
 
 const Template: Story = args => ({
-  components: { MwBadge },
+  components: { MwAlert },
   setup() {
     // args: {
     //   variant: 'primary',
     //   isClearable: false,
-    //   default: 'Badge',
+    //   default: 'Hey, this is an alert',
     // }
     return { args }
   },
-  template: '<MwBadge v-bind="args">{{ args.default }}</MwBadge>',
+  template: '<MwAlert v-bind="args">{{ args.default }}</MwAlert>',
 })
 
-export const Badge = Template.bind({})
+export const Alert = Template.bind({})

@@ -1,10 +1,11 @@
+import { createI18n } from 'vue-i18n'
 import { app } from '@storybook/vue3'
-import i18n from '../src/modules/i18n'
+import i18nOptions from '../src/modules/i18n'
  
 import 'virtual:windi.css'
 import '../src/styles/index.scss'
 
-app.use(i18n)
+app.use(createI18n(i18nOptions))
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -12,6 +13,11 @@ export const parameters = {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
+    },
+  },
+  options: {
+    storySort: {
+      order: ['Intro', ['Installation', 'Customize', 'i18n'], 'Components'], 
     },
   },
 };

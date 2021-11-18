@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 import MwButton from '.'
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: MwButton,
   argTypes: {
     href: {
@@ -49,7 +49,7 @@ export default {
     isOutlined: false,
     hasIcon: false,
     default: 'Btn',
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -72,5 +72,3 @@ const Template: Story = args => ({
 })
 
 export const Button = Template.bind({})
-
-

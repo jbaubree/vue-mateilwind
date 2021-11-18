@@ -10,6 +10,7 @@ const messages = Object.fromEntries(
 export default {
   legacy: false,
   locale: 'en',
+  fallbackLocale: 'en',
   messages,
   globalInjection: true,
 }

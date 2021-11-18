@@ -1,11 +1,11 @@
 import { Meta, Story } from '@storybook/vue3'
-import MwList from '.'
 import MwListItem from '../list-item'
 import MwButton from '../button'
 import type { ListItem } from '../../types'
+import MwList from '.'
 
 export default {
-  title: 'List',
+  title: 'Components/List',
   component: MwList,
 } as Meta
 
@@ -53,5 +53,3 @@ const Template: Story = args => ({
 })
 
 export const List = Template.bind({})
-
-

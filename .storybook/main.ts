@@ -18,7 +18,8 @@ module.exports = {
     },
   },
   stories: [
-    "../src/components/**/*.stories.ts"
+    "../src/components/**/*.stories.ts",
+    "../src/storybook/**/*.stories.md"
   ],
   addons: [
     '@storybook/addon-essentials',
@@ -42,7 +43,6 @@ module.exports = {
       imports: [
         'vue',
         'vue-i18n',
-        '@vueuse/head',
         '@vueuse/core',
       ],
       dts: 'src/auto-imports.d.ts',

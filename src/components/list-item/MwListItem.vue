@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Ripple from 'material-ripple-effects'
-import type { Variant } from '@/types'
-import type { ListItem } from '@/types'
+import type { Variant, ListItem } from '@/types'
 
 defineProps<{
   item: ListItem

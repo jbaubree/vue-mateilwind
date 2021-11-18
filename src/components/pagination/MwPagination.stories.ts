@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/vue3'
 import { ref } from 'vue'
-import MwPagination from '.'
 import type { PaginationChangeEventContext } from '../../types'
+import MwPagination from '.'
 
 export default {
-  title: 'Pagination',
+  title: 'Components/Pagination',
   component: MwPagination,
   argTypes: {
     nbItems: {
@@ -17,7 +17,7 @@ export default {
   args: {
     nbItems: 20,
     itemsPerPage: 5,
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -41,5 +41,3 @@ const Template: Story = args => ({
 })
 
 export const Pagination = Template.bind({})
-
-

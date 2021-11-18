@@ -1,12 +1,12 @@
 import { Meta, Story } from '@storybook/vue3'
 import { useField } from 'vee-validate'
 import { ref, watchEffect } from 'vue'
-import MwSelect from '.'
 import countries from '../../utils/countries'
 import type { SelectItem } from '../../types'
+import MwSelect from '.'
 
 export default {
-  title: 'Select',
+  title: 'Components/Select',
   component: MwSelect,
   argTypes: {
     items: {
@@ -41,10 +41,10 @@ export default {
     hasMultipleValues: true,
     isClearable: true,
     hasAsyncData: true,
-  }
+  },
 } as Meta
 
-const Template: Story = (args) => ({
+const Template: Story = args => ({
   components: { MwSelect },
   setup() {
     // args: {
@@ -99,5 +99,3 @@ const Template: Story = (args) => ({
 })
 
 export const Select = Template.bind({})
-
-

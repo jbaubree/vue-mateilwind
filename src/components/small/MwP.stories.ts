@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 import MwSmall from '.'
 
 export default {
-  title: 'Small',
+  title: 'Components/Small',
   component: MwSmall,
   argTypes: {
     variant: {
@@ -16,7 +16,7 @@ export default {
   },
   args: {
     default: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -31,5 +31,3 @@ const Template: Story = args => ({
 })
 
 export const Small = Template.bind({})
-
-

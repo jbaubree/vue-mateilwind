@@ -38,7 +38,7 @@ const canGoBack = computed((): boolean => (currentPage.value > 1))
   <MwButtonGroup v-if="canGoBack || canGoNext">
     <MwButton
       v-if="canGoBack"
-      isOutlined
+      is-outlined
       variant="primary"
       @click="onPreviousPageButtonClick()"
     >
@@ -46,7 +46,7 @@ const canGoBack = computed((): boolean => (currentPage.value > 1))
     </MwButton>
     <MwButton
       v-if="canGoNext"
-      isOutlined
+      is-outlined
       variant="primary"
       @click="onNextPageButtonClick()"
     >

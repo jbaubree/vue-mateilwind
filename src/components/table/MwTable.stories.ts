@@ -1,10 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
-import { ref } from 'vue'
-import MwTable from '.'
 import MwPagination from '../pagination'
+import MwTable from '.'
 
 export default {
-  title: 'Table',
+  title: 'Components/Table',
   component: MwTable,
   argTypes: {
     fields: {
@@ -107,10 +106,10 @@ export default {
     isLoading: false,
     hasNoLocalSorting: false,
     hasStickyHeader: false,
-  }
+  },
 } as Meta
 
-const Template: Story = (args) => ({
+const Template: Story = args => ({
   components: { MwTable, MwPagination },
   setup() {
     // args: {
@@ -181,5 +180,3 @@ const Template: Story = (args) => ({
 })
 
 export const Table = Template.bind({})
-
-

@@ -1,11 +1,11 @@
 import { Meta, Story } from '@storybook/vue3'
-import MwDropdown from '.'
 import MwButton from '../button'
 import MwListItem from '../list-item'
 import type { ListItem } from '../../types'
+import MwDropdown from '.'
 
 export default {
-  title: 'Dropdown',
+  title: 'Components/Dropdown',
   component: MwDropdown,
   argTypes: {
     position: {
@@ -24,7 +24,7 @@ export default {
     dropup: false,
     closeOnItemClick: false,
     default: 'Dropdown',
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -71,5 +71,3 @@ const Template: Story = args => ({
 })
 
 export const Dropdown = Template.bind({})
-
-

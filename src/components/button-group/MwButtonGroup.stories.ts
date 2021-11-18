@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
-import MwButtonGroup from '.'
 import MwButton from '../button'
+import MwButtonGroup from '.'
 
 export default {
-  title: 'Button Group',
+  title: 'Components/Button Group',
   component: MwButtonGroup,
 } as Meta
 
@@ -21,5 +21,3 @@ const Template: Story = args => ({
 })
 
 export const ButtonGroup = Template.bind({})
-
-

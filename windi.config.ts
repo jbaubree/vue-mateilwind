@@ -72,13 +72,13 @@ export default defineConfig({
       colors: {
         ...colors,
         // Custom colors
-        primary: colors.violet,
-        secondary: colors.gray,
-        success: colors.green,
-        warning: colors.amber,
-        danger: colors.red,
-        link: colors.blue,
-        light: {
+        'primary': colors.violet,
+        'secondary': colors.gray,
+        'success': colors.green,
+        'warning': colors.amber,
+        'danger': colors.red,
+        'link': colors.blue,
+        'light': {
           500: 'white',
           700: colors.gray[200],
         },

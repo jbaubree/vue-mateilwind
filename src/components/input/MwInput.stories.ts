@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import MwInput from '.'
 
 export default {
-  title: 'Input',
+  title: 'Components/Input',
   component: MwInput,
   argTypes: {
     variant: {
@@ -38,7 +38,7 @@ export default {
     size: 'md',
     hasValidation: false,
     icon: '',
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -64,5 +64,3 @@ const Template: Story = args => ({
 })
 
 export const Input = Template.bind({})
-
-

@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import MwDatepicker from '.'
 
 export default {
-  title: 'Datepicker',
+  title: 'Components/Datepicker',
   component: MwDatepicker,
   argTypes: {
     label: {
@@ -11,7 +11,7 @@ export default {
     },
     defaultStep: {
       control: { type: 'select' },
-      options: ['day', 'month', 'year']
+      options: ['day', 'month', 'year'],
     },
     months: {
       control: { type: 'array' },
@@ -33,8 +33,8 @@ export default {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
-    }
-  }
+    },
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -59,5 +59,3 @@ const Template: Story = args => ({
 })
 
 export const Datepicker = Template.bind({})
-
-

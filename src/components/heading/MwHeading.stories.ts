@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 import MwHeading from '.'
 
 export default {
-  title: 'Heading',
+  title: 'Components/Heading',
   component: MwHeading,
   argTypes: {
     type: {
@@ -21,7 +21,7 @@ export default {
   args: {
     type: 'h1',
     default: 'I am Heading',
-  }
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -40,5 +40,3 @@ const Template: Story = args => ({
 })
 
 export const Heading = Template.bind({})
-
-

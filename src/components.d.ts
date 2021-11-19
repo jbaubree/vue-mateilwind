@@ -5,7 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     CarbonCalendar: typeof import('~icons/carbon/calendar')['default']
-    MwAlert: typeof import('./components/alert/MwAlert.vue')['default']
+    MwAlert: typeof import('./components/alert/MwAlerts.vue')['default']
     MwAlerts: typeof import('./components/alert/MwAlerts.vue')['default']
     MwBadge: typeof import('./components/badge/MwBadge.vue')['default']
     MwButton: typeof import('./components/button/MwButton.vue')['default']

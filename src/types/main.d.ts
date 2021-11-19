@@ -1,6 +1,6 @@
 declare module 'vue' {
   export interface GlobalComponents {
-    MwAlert: typeof import('vue-mateilwind/src/components/alert/MwAlerts.vue')['default']
+    MwAlert: typeof import('vue-mateilwind/src/components/alert/MwAlert.vue')['default']
     MwBadge: typeof import('vue-mateilwind/src/components/badge/MwBadge.vue')['default']
     MwButton: typeof import('vue-mateilwind/src/components/button/MwButton.vue')['default']
     MwButtonGroup: typeof import('vue-mateilwind/src/components/button-group/MwButtonGroup.vue')['default']

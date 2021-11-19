@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import Alert from './MwAlerts.vue'
+import Alert from './MwAlert.vue'
 
 Alert.install = (Vue: App) => {
   Vue.component('MwAlert', Alert)

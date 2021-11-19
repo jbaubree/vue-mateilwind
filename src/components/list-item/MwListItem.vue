@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import Ripple from 'material-ripple-effects'
 import type { Variant, ListItem } from '@/types'
+import { useStyle } from '@/utils/style.windi'
 
-defineProps<{
+const props = defineProps<{
   item: ListItem
   isClickable?: boolean
   isSelected?: boolean
   isDisabled?: boolean
   variant?: Variant
 }>()
+
+const { bg50, bg200, hoverBg100 } = useStyle(props.variant ?? 'primary')
 
 const slots = useSlots()
 
@@ -21,11 +24,11 @@ const rippleEffect = new Ripple()
     :class="[{
       'flex': slots.icon,
       'cursor-pointer': isClickable && !isDisabled,
-      '!bg-gray-200': isSelected && !variant,
+      'bg-gray-200': isSelected && !variant,
       'opacity-50': isDisabled,
-      'hover:bg-gray-100 bg-gray-50': !variant && !isDisabled,
-      [`hover:bg-${variant}-100 bg-${variant}-50`]: variant && !isDisabled,
-      [`!bg-${variant}-200`]: isSelected && variant,
+      'hover:bg-gray-100 bg-gray-50': !variant && !isDisabled && !isSelected,
+      [`${hoverBg100} ${bg50}`]: variant && !isDisabled && !isSelected,
+      [`${bg200}`]: isSelected && variant,
     }]"
     @mouseup="(e: MouseEvent) => {
       !isDisabled && isClickable && rippleEffect.create(e, 'dark')

@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import type { Variant } from '@/types'
+import { useStyle } from '@/utils/style.windi'
 
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
   variant?: Variant
   isClearable?: boolean
 }>(), {
   variant: 'primary',
 })
+
+const { bg500 } = useStyle(props.variant)
 
 const emit = defineEmits<{
   (eventName: 'clear'): void
@@ -15,8 +18,8 @@ const emit = defineEmits<{
 
 <template>
   <div
-    class="inline-flex items-center gap-1 bg-primary-500 text-white rounded-full px-2 py-1 overflow-hidden"
-    :class="`bg-${variant}-500`"
+    class="inline-flex items-center gap-1 text-white rounded-full px-2 py-1 overflow-hidden"
+    :class="`${bg500}`"
   >
     <span class="whitespace-nowrap overflow-hidden overflow-ellipsis leading-5">
       <slot />

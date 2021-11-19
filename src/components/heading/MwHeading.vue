@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Heading, Variant } from '@/types'
+import { useStyle } from '@/utils/style.windi'
 
 const props = defineProps<{
   type: Heading
@@ -27,8 +28,10 @@ const defaultClasses = computed((): string => {
 })
 
 const colorClass = computed((): string => {
-  if (props.variant)
-    return `text-${props.variant}-500`
+  if (props.variant) {
+    const { text500 } = useStyle(props.variant)
+    return text500.value
+  }
 
   if (props.type === 'LeadText')
     return 'text-gray-500'

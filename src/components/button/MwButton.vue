@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Ripple from 'material-ripple-effects'
 import type { ButtonSize, ButtonVariant } from '@/types'
+import { useStyle } from '@/utils/style.windi'
 
 const props = withDefaults(defineProps<{
   href?: string
@@ -19,6 +20,8 @@ const props = withDefaults(defineProps<{
 
 const attrs = useAttrs()
 
+const { bg500, border500, hoverBg500, hoverBg700, text500 } = useStyle(props.variant)
+
 const rippleEffect = new Ripple()
 
 const type = computed((): string => (props.href ? 'a' : 'button'))
@@ -28,7 +31,7 @@ const type = computed((): string => (props.href ? 'a' : 'button'))
   <component
     :is="type"
     :href="href"
-    class="inline-block font-bold transition duration-300 relative"
+    class="inline-block font-bold transition duration-300 relative border"
     :class="[{
       // Modifiers
       'w-full': isBlock,
@@ -50,12 +53,12 @@ const type = computed((): string => (props.href ? 'a' : 'button'))
       // Colors
       'text-gray-700': variant.includes('light'),
       'text-blue-500 bg-white hover:bg-white': variant === 'link',
-      [`bg-${variant}-500 text-white`]: !isOutlined && variant !== 'link',
-      [`bg-transparent text-${variant}-500 border border-${variant}-500`]: isOutlined,
-      [`hover:bg-${variant}-500 hover:text-white hover:border-transparent`]: isOutlined && !isDisabled && variant !== 'link' && !variant.includes('light'),
+      [`${bg500} ${border500} text-white`]: !isOutlined && variant !== 'link',
+      [`bg-transparent ${text500} ${border500}`]: isOutlined,
+      [`${hoverBg500} hover:text-white hover:border-transparent`]: isOutlined && !isDisabled && variant !== 'link' && !variant.includes('light'),
       ['hover:bg-blue-500 hover:text-white hover:border-transparent']: isOutlined && !isDisabled && variant === 'link',
-      [`hover:bg-${variant}-700 hover:text-white hover:border-transparent`]: isOutlined && !isDisabled && variant.includes('light'),
-      [`hover:bg-${variant}-700`]: !isDisabled && !isLoading && !isOutlined && variant !== 'link',
+      [`${hoverBg700} hover:text-white hover:border-transparent`]: isOutlined && !isDisabled && variant.includes('light'),
+      [`${hoverBg700}`]: !isDisabled && !isLoading && !isOutlined && variant !== 'link',
     }]"
     @mouseup="(e: MouseEvent) => {
       if (!isLoading && !isDisabled) rippleEffect.create(e, variant === 'link' ? 'dark' : 'light')

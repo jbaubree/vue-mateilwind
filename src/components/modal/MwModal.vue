@@ -50,8 +50,8 @@ if (props.closeOnClickOutside)
                 class="ml-auto w-8 h-8 flex items-center content-center cursor-pointer"
                 @click="emit('cancel')"
               >
-                <div class="h-1 w-8 absolute rounded bg-gray-200 transform rotate-45"></div>
-                <div class="h-1 w-8 absolute rounded bg-gray-200 transform -rotate-45"></div>
+                <div class="h-1 w-8 absolute rounded bg-gray-200 transform !rotate-45"></div>
+                <div class="h-1 w-8 absolute rounded bg-gray-200 transform !-rotate-45"></div>
               </div>
             </div>
             <div class="relative p-6 flex-auto">

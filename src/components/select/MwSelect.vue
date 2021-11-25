@@ -147,8 +147,8 @@ const filteredItems = computed((): SelectItem[] | undefined => {
         class="w-3 h-3 ml-1 flex items-center content-center cursor-pointer"
         @click="resetInput"
       >
-        <div class="h-px w-3 absolute rounded bg-black transform rotate-45"></div>
-        <div class="h-px w-3 absolute rounded bg-black transform -rotate-45"></div>
+        <div class="h-px w-3 absolute rounded bg-black transform !rotate-45"></div>
+        <div class="h-px w-3 absolute rounded bg-black transform !-rotate-45"></div>
       </div>
       <div
         class="h-5 w-5 transition-transform duration-300"

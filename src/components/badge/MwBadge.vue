@@ -29,8 +29,8 @@ const emit = defineEmits<{
       class="relative min-w-2 min-h-2 flex items-center content-center cursor-pointer"
       @click.stop="emit('clear')"
     >
-      <div class="h-px w-2 absolute rounded bg-white transform rotate-45"></div>
-      <div class="h-px w-2 absolute rounded bg-white transform -rotate-45"></div>
+      <div class="h-px w-2 absolute rounded bg-white transform !rotate-45"></div>
+      <div class="h-px w-2 absolute rounded bg-white transform !-rotate-45"></div>
     </div>
   </div>
 </template>

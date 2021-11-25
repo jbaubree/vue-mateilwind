@@ -26,8 +26,8 @@ const showAlert = ref(true)
       class="relative min-w-3 min-h-3 flex items-center content-center cursor-pointer ml-auto"
       @click="showAlert = false"
     >
-      <div class="h-px w-3 absolute rounded transform rotate-45" :class="`${bg500}`"></div>
-      <div class="h-px w-3 absolute rounded transform -rotate-45" :class="`${bg500}`"></div>
+      <div class="h-px w-3 absolute rounded transform !rotate-45" :class="`${bg500}`"></div>
+      <div class="h-px w-3 absolute rounded transform !-rotate-45" :class="`${bg500}`"></div>
     </div>
   </div>
 </template>

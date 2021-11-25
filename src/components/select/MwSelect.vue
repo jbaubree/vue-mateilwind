@@ -163,7 +163,7 @@ const filteredItems = computed((): SelectItem[] | undefined => {
       <div
         v-if="showItems"
         ref="rListItems"
-        class="absolute w-full z-10 py-2 bg-gray-50 rounded-md shadow-md dropdown-menu top-full mt-2 left-0"
+        class="max-h-75 overflow-y-auto absolute w-full z-10 py-2 bg-gray-50 rounded-md shadow-md dropdown-menu top-full mt-2 left-0"
       >
         <MwList class="px-0 py-2">
           <div v-if="isLoading" class="absolute transform -translate-x-1/2 left-50 py-5">

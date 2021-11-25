@@ -57,7 +57,7 @@ function updateValue(e: Event): void {
         ]"
       >
         <label
-          class="text-gray-400 absolute h-5 top-4 transition-all duration-300 transform"
+          class="text-gray-400 absolute h-5 top-4 transition-all duration-300 transform whitespace-nowrap overflow-hidden max-w-full"
           :class="{
             'text-xs -translate-y-6': isInputFocus || modelValue?.length,
           }"

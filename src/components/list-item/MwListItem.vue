@@ -22,7 +22,7 @@ const rippleEffect = new Ripple()
   <div
     class="mb-1 transition duration-300 py-3 px-4 items-center"
     :class="[{
-      'flex': slots.icon,
+      'flex': slots.icon || slots.actions,
       'cursor-pointer': isClickable && !isDisabled,
       'bg-gray-200': isSelected && !variant,
       'opacity-50': isDisabled,

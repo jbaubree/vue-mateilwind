@@ -26,10 +26,6 @@ export default {
     hasValidation: {
       control: { type: 'boolean' },
     },
-    icon: {
-      control: 'text',
-      description: 'Icon',
-    },
   },
   args: {
     variant: 'primary',
@@ -37,7 +33,6 @@ export default {
     label: 'Label',
     size: 'md',
     hasValidation: false,
-    icon: '',
   },
 } as Meta
 
@@ -50,15 +45,19 @@ const Template: Story = args => ({
     //   label: 'Label',
     //   size: 'md',
     //   hasValidation: false,
-    //   icon: '',
     // }
+    const leftIcon = ref('ICO')
+    const rightIcon = ref('ICO')
     const model = ref('')
-    return { args, model }
+    return { args, model, leftIcon, rightIcon }
   },
   template: `
     <MwInput v-bind="args" v-model="model">
-      <template #icon>
-        {{ args.icon }}
+      <template #leftIcon>
+        {{ leftIcon }}
+      </template>
+      <template #rightIcon>
+        {{ rightIcon }}
       </template>
     </MwInput>`,
 })

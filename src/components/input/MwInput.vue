@@ -41,35 +41,40 @@ function updateValue(e: Event): void {
       errorMessage ? 'mb-5' : 'mb-3',
     ]"
   >
-    <div
-      class="flex items-center max-w-full w-full min-w-0 border-b form-input-wrapper relative"
-      :class="[
-        inputWrapperClasses,
-        {
-          'h-9': size === 'sm',
-          'h-11': size === 'md',
-          'h-13': size === 'lg'
-        }
-      ]"
-    >
-      <label
-        class="text-gray-400 absolute h-5 top-4 transition-all duration-300 transform"
-        :class="{
-          'text-xs -translate-y-6': isInputFocus || modelValue?.length,
-        }"
-      >{{ label }}</label>
-      <input
-        ref="rInput"
-        :value="modelValue"
-        :type="type"
-        placeholder=" "
-        class="relative min-w-0 min-h-8 flex-1 bg-transparent px-0"
-        :class="{ 'text-sm': size === 'sm' }"
-        @focus="isInputFocus = true"
-        @input="updateValue($event), isValidating = true"
-      />
-      <div v-if="slots.icon" class>
-        <slot name="icon" />
+    <div class="flex items-center">
+      <div v-if="slots.leftIcon" class="mr-1">
+        <slot name="leftIcon" />
+      </div>
+      <div
+        class="flex items-center max-w-full w-full min-w-0 border-b form-input-wrapper relative"
+        :class="[
+          inputWrapperClasses,
+          {
+            'h-9': size === 'sm',
+            'h-11': size === 'md',
+            'h-13': size === 'lg'
+          }
+        ]"
+      >
+        <label
+          class="text-gray-400 absolute h-5 top-4 transition-all duration-300 transform"
+          :class="{
+            'text-xs -translate-y-6': isInputFocus || modelValue?.length,
+          }"
+        >{{ label }}</label>
+        <input
+          ref="rInput"
+          :value="modelValue"
+          :type="type"
+          placeholder=" "
+          class="relative min-w-0 min-h-8 flex-1 bg-transparent px-0"
+          :class="{ 'text-sm': size === 'sm' }"
+          @focus="isInputFocus = true"
+          @input="updateValue($event), isValidating = true"
+        />
+        <div v-if="slots.rightIcon" class="ml-1">
+          <slot name="rightIcon" />
+        </div>
       </div>
     </div>
     <span

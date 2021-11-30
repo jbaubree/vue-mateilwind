@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import countries from '@/utils/countries'
+import type { SelectItem } from '@/types'
+
 const {
   isRevealed,
   reveal,
@@ -11,6 +14,9 @@ const modalBody = `I always felt like I could do anything. That’s the main
       of themselves! They're slowed down by their perception of
       themselves. If you're taught you can’t do anything, you
       won’t do anything. I was taught I could do everything.`
+
+const selectFetchedItems = ref<SelectItem[]>(countries.filter((_, index) => index < 10))
+const selectedItems = ref<SelectItem | ''>({ title: 'Afghanistan', value: 'AF' })
 
 </script>
 <template>
@@ -47,4 +53,12 @@ const modalBody = `I always felt like I could do anything. That’s the main
       </MwButton>
     </template>
   </MwModal>
+
+  <MwSelect
+    v-model="selectedItems"
+    label="salut"
+    is-clearable
+    :items="selectFetchedItems"
+  />
+  {{ selectedItems }}
 </template>

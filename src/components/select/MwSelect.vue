@@ -16,7 +16,9 @@ const props = withDefaults(defineProps<{
   variant: 'primary',
 })
 
-const search = ref<string>('')
+const isModelArray = computed((): boolean => props.modelValue.constructor.toString().includes('Array'))
+
+const search = ref<string>(!isModelArray.value && props.modelValue !== {} && (props.modelValue as SelectItem).value ? (props.modelValue as SelectItem).title : '')
 const rInput = ref<HTMLDivElement>()
 const rListItems = ref<HTMLDivElement>()
 const showItems = ref<boolean>(false)
@@ -33,8 +35,6 @@ function updateValue(item: SelectItem[] | SelectItem | {}): void {
 }
 
 onClickOutside(rListItems, resetSearch)
-
-const isModelArray = computed((): boolean => props.modelValue.constructor.toString().includes('Array'))
 
 function resetSearch(): void {
   if (!props.hasMultipleValues) {

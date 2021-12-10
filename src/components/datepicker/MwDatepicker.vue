@@ -2,14 +2,17 @@
 import type { SelectableDateType } from '@/types'
 const { locale } = useI18n()
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   modelValue?: string
   label?: string
   defaultStep?: SelectableDateType
   months?: string[]
   days?: string[]
   formatOptions?: Intl.DateTimeFormatOptions
-}>()
+  selectDay: boolean
+}>(), {
+  selectDay: true,
+})
 
 const months = ref<Array<string>>(props.months || ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])
 const days = ref<Array<string>>(props.days || ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday'])
@@ -25,6 +28,7 @@ const blankdays = ref<Array<number>>([])
 const emit = defineEmits<{
   (eventName: 'update:modelValue', value: string): void
 }>()
+
 const rDatepicker = ref<HTMLDivElement>()
 onClickOutside(rDatepicker, (): void => {
   showDatepicker.value = false
@@ -78,7 +82,7 @@ function setYears() {
   years.value = yearsArray.reverse()
 }
 
-function onDayClick(date: number): void {
+function onDayClick(date = 1): void {
   const selectedDate = new Date(year.value, month.value, date)
   const isoSelectedDate = selectedDate.toISOString()
   datepickerValue.value = formatter.value.format(selectedDate)
@@ -88,8 +92,13 @@ function onDayClick(date: number): void {
 
 function setMonth(monthIndex: number) {
   month.value = monthIndex
-  currentSelection.value = 'day'
-  setNoOfDays()
+  if (props.selectDay) {
+    currentSelection.value = 'day'
+    setNoOfDays()
+  }
+  else {
+    onDayClick()
+  }
 }
 
 function setYear(y: number) {
@@ -178,7 +187,9 @@ function onClearButtonClick(): void {
 }
 
 function setCurrentSelection() {
-  currentSelection.value = props.defaultStep || 'day'
+  if (props.defaultStep) currentSelection.value = props.defaultStep
+  else if (!props.selectDay) currentSelection.value = 'year'
+  else currentSelection.value = 'day'
 }
 
 onMounted(() => {
@@ -258,7 +269,7 @@ onMounted(() => {
           <div class="flex flex-wrap mb-3 -mx-1">
             <template v-for="day in days" :key="day">
               <div style="width: 14.28%" class="px-1">
-                <div class="text-gray-800 font-medium text-center text-xs">
+                <div class="!text-gray-700 font-medium text-center text-xs">
                   {{ day.substr(0, 3) }}
                 </div>
               </div>
@@ -297,7 +308,7 @@ onMounted(() => {
               <div style="width: 25%" class="px-1 mb-1">
                 <MwButton
                   variant="light-primary"
-                  class="px-1 mb-1 rounded-full text-gray-700"
+                  class="px-1 mb-1 rounded-full !text-gray-700"
                   :is-block="true"
                   @click="setMonth(index)"
                 >
@@ -313,7 +324,7 @@ onMounted(() => {
               <div style="width: 25%" class="px-1 mb-1">
                 <MwButton
                   variant="light-primary"
-                  class="px-1 mb-1 rounded-full text-gray-700"
+                  class="px-1 mb-1 rounded-full !text-gray-700"
                   :is-block="true"
                   @click="setYear(yearNumber)"
                 >
